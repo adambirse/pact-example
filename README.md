@@ -2,7 +2,7 @@
 
 This is an example application for demonstrating the use of pact and consumer driven contract testing.
 
-The codebase was created for the blogpost **TBA**.
+The codebase was created for this [blogpost](https://blog.risingstack.com/consumer-driven-contract-testing-with-pact/) slightly inconsistent with the repository but good enough to get the gist.
 
 ## Usage
 
@@ -11,13 +11,13 @@ Setup
 ```bash
 $ git clone git@github.com:RisingStack/pact-example.git
 $ npm i
-``` 
+```
 
 Run consumer side tests and create pacts
 
 ```bash
 $ npm run test-consumer
-``` 
+```
 
 Start Pact Broker
 
@@ -37,7 +37,7 @@ Publish pacts
 $ npm run publish-pacts
 ```
 
-Verify pacts against the provider 
+Verify pacts against the provider
 
 ```bash
 $ npm run test-provider
