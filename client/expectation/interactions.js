@@ -22,7 +22,7 @@ const REGISTRATION_REQUEST_BODY = {
 
 const REGISTRATION_RESPONSE_BODY = {
   id: like(1),
-  name: 'Bar',
+  name: like('Bar'),
   img: 'https://webshop.com/img/cheap-shoe.png',
   price: 2,
   stock: 3
