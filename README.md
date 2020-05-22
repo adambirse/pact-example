@@ -18,16 +18,16 @@ Build Pact Broker
 $ npm run build-pact-broker
 ```
 
-Run consumer side tests and create pacts
-
-```bash
-$ npm run test-consumer
-```
-
 Start Pact Broker
 
 ```bash
 $ npm run pact-broker
+```
+
+Run consumer side tests and create pacts
+
+```bash
+$ npm run test-consumer
 ```
 
 Delete example pact
@@ -48,9 +48,18 @@ Verify pacts against the provider
 $ npm run test-provider
 ```
 
-## Compatibility
+## Pactflow
 
-The codebase was written using `node v8.9.0`
+If you wish to use a hosted pact broker rather than a local docker one, Pactflow is a hosted version you can create a free account - https://pactflow.io/
+
+You will then need to set a couple of environment variables
+
+`set PACT_BROKER_URL=<YOUR_BROKER>`
+
+`set PACT_BROKER_TOKEN=<YOUR_TOKEN>`
+
+You will need to unset them to use the local pact broker.
+
 
 ## Things to experiment with
 
@@ -64,16 +73,3 @@ The codebase was written using `node v8.9.0`
    - update `package.json` scripts.  
    - update `verifyPacts.js` to verify against new consumer
 - Shared pact broker, See Pactflow below.
-
-
-## Pactflow
-
-Pactflow is a hosted pack broker you can create a free account - https://pactflow.io/
-
-You will then need to set a couple of environment variables
-
-`set PACT_BROKER_URL=<YOUR_BROKER>`
-
-`set PACT_BROKER_TOKEN=<YOUR_TOKEN>`
-
-You will need to unset them to use the local pact broker.
