@@ -64,11 +64,11 @@ The codebase was written using `node v8.9.0`
 
 Create an account - https://pactflow.io/
 
-You will then need your
+You will then need to set a couple of environment variables
 
-`BROKER_URL`
+`set PACT_BROKER_URL=<YOUR_BROKER>`
 
-`BROKER_TOKEN`
+`set PACT_BROKER_TOKEN=<YOUR_TOKEN>`
 
 
 ### Publishing pacts

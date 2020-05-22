@@ -3,12 +3,14 @@
 const pact = require('@pact-foundation/pact-node')
 require('./testProductsService')
 
+const PACT_BROKER_URL = process.env.PACT_BROKER_URL || 'http://localhost:8080';
+const PACT_BROKER_TOKEN = process.env.PACT_BROKER_TOKEN || '';
 
-//Works for new pact-node version but always reports success on the command line (correct results published to local broker though)
 const opts = {
     providerBaseUrl: 'http://localhost:3001', // where your service will be running during the test, either staging or localhost on CI
     providerStatesSetupUrl: 'http://localhost:3001/test/setup', // the url to call to set up states
-    pactBrokerUrl: 'http://localhost:8080',
+    pactBrokerUrl: PACT_BROKER_URL,
+    pactBrokerToken: PACT_BROKER_TOKEN,
     provider: 'ProductService',
     publishVerificationResult: true,
     providerVersion: '1.0.0',
