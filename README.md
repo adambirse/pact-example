@@ -12,6 +12,12 @@ Setup
 $ npm i
 ```
 
+Build Pact Broker
+
+```bash
+$ npm run build-pact-broker
+```
+
 Run consumer side tests and create pacts
 
 ```bash
@@ -62,7 +68,7 @@ The codebase was written using `node v8.9.0`
 
 ## Pactflow
 
-Create an account - https://pactflow.io/
+Pactflow is a hosted pack broker you can create a free account - https://pactflow.io/
 
 You will then need to set a couple of environment variables
 
@@ -70,11 +76,4 @@ You will then need to set a couple of environment variables
 
 `set PACT_BROKER_TOKEN=<YOUR_TOKEN>`
 
-
-### Publishing pacts
-
-`curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.84.0/pact-1.84.0-osx.tar.gz
-tar xzf pact-1.84.0-osx.tar.gz`
-
-`cd pact/bin`
-` ./pact-broker publish --consumer-app-version 1.0.0 --broker-base-url BROKER_URL --broker-token BROKER_TOKEN ../../pact-example/pacts/client-productservice.json --tag master`
+You will need to unset them to use the local pact broker.
