@@ -57,6 +57,24 @@ The codebase was written using `node v8.9.0`
    - change `consumer: 'Client',` in `provider.js`)
    - update `package.json` scripts.  
    - update `verifyPacts.js` to verify against new consumer
-- Shared pact broker
-   - Ngrok to a local machine
-   - Pactflow
+- Shared pact broker, See Pactflow below.
+
+
+## Pactflow
+
+Create an account - https://pactflow.io/
+
+You will then need your
+
+`BROKER_URL`
+
+`BROKER_TOKEN`
+
+
+### Publishing pacts
+
+`curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.84.0/pact-1.84.0-osx.tar.gz
+tar xzf pact-1.84.0-osx.tar.gz`
+
+`cd pact/bin`
+` ./pact-broker publish --consumer-app-version 1.0.0 --broker-base-url BROKER_URL --broker-token BROKER_TOKEN ../../pact-example/pacts/client-productservice.json --tag master`
